@@ -28,7 +28,7 @@ class AIOHttpConnection(Connection):
             connector=aiohttp.TCPConnector(
                 loop=self.loop,
                 verify_ssl=verify_certs,
-                conn_timeout=self.timeout,
+                keepalive_timeout=self.timeout,
                 use_dns_cache=use_dns_cache,
             )
         )
